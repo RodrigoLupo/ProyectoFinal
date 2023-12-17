@@ -1,21 +1,21 @@
 <div class="box box-info padding-1">
-    <div class="box-body row">
-        <div class="form-group col-md-4">
+    <div class="box-body">
+        <div class="form-group">
             {{ Form::label('codigo') }}
             {{ Form::text('codigo', $producto->codigo, ['class' => 'form-control' . ($errors->has('codigo') ? ' is-invalid' : ''), 'placeholder' => 'Codigo']) }}
             {!! $errors->first('codigo', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        <div class="form-group col-md-5">
+        <div class="form-group">
             {{ Form::label('producto') }}
             {{ Form::text('producto', $producto->producto, ['class' => 'form-control' . ($errors->has('producto') ? ' is-invalid' : ''), 'placeholder' => 'Producto']) }}
             {!! $errors->first('producto', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group">
             {{ Form::label('precio_compra') }}
             {{ Form::text('precio_compra', $producto->precio_compra, ['class' => 'form-control' . ($errors->has('precio_compra') ? ' is-invalid' : ''), 'placeholder' => 'Precio Compra']) }}
             {!! $errors->first('precio_compra', '<div class="invalid-feedback">:message</div>') !!}
         </div>
-        <div class="form-group col-md-3">
+        <div class="form-group">
             {{ Form::label('precio_venta') }}
             {{ Form::text('precio_venta', $producto->precio_venta, ['class' => 'form-control' . ($errors->has('precio_venta') ? ' is-invalid' : ''), 'placeholder' => 'Precio Venta']) }}
             {!! $errors->first('precio_venta', '<div class="invalid-feedback">:message</div>') !!}
@@ -24,7 +24,7 @@
             {{ Form::label('id_categoria', 'Categoría:') }}
             {!! Form::select('id_categoria', $categorias, $producto->id_categoria, ['class' => 'form-control', 'placeholder' => 'Selecciona una categoría']) !!}
         </div>
-        <div class="form-group col-md-4">
+        <div class="form-group">
             {{ Form::label('foto', 'Foto') }}
             {{ Form::file('foto', ['class' => 'form-control' . ($errors->has('foto') ? ' is-invalid' : ''), 'placeholder' => 'Foto']) }}
             {!! $errors->first('foto', '<div class="invalid-feedback">:message</div>') !!}

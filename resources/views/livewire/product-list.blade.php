@@ -63,7 +63,7 @@
                                     <input type="number" wire:model.defer="quantity.{{ $item->rowId }}"
                                         wire:change="updateQuantity('{{ $item->rowId }}')" class="form-control">
                                 </td>
-                                <td>${{ number_format($item->price, 2) }}</td>
+                                <td>S/. {{ number_format($item->price, 2) }}</td>
                                 <td><button wire:click="removeFromCart('{{ $item->rowId }}')"
                                         class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></button></td>
                                 <!-- Agrega más columnas según tus necesidades -->

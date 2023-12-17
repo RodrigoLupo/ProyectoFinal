@@ -14,7 +14,7 @@
 
             <div class="card card-default">
                 <div class="card-header">
-                    <span class="card-title">{{ __('Create') }} Categorias</span>
+                    <span class="card-title">{{ __('Crear') }} categoria</span>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('categorias.store') }}" role="form">

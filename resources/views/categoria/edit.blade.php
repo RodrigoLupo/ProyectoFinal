@@ -14,7 +14,7 @@
 
             <div class="card card-default">
                 <div class="card-header">
-                    <span class="card-title">{{ __('Update') }} Categoria</span>
+                    <span class="card-title">{{ __('Editar') }} categoria</span>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('categorias.update', $categoria->id) }}" role="form"

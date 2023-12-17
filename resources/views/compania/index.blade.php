@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Compañia</h1>
+    <h1>Empresa</h1>
 @stop
 
 @section('content')
@@ -14,7 +14,7 @@
                     <div style="display: flex; justify-content: space-between; align-items: center;">
 
                         <span id="card_title">
-                            {{ __('Compania') }}
+                            {{ __('Empresa') }}
                         </span>
 
                     </div>

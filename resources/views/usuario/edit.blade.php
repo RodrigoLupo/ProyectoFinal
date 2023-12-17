@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Editar usuario</h1>
+    <h1>Usuarios</h1>
 @stop
 
 @section('content')
@@ -14,7 +14,7 @@
 
             <div class="card card-default">
                 <div class="card-header">
-                    <span class="card-title">{{ __('Update') }} Usuario</span>
+                    <span class="card-title">{{ __('Editar') }} usuario</span>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('usuarios.update', $usuario->id) }}" role="form"
@@ -35,8 +35,4 @@
     <link rel="stylesheet" href="/css/admin_custom.css">
 @stop
 
-@section('js')
-    <script>
-        console.log('Hi!');
-    </script>
-@stop
+

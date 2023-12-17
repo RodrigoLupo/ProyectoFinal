@@ -24,6 +24,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [AuthenticatedSessionController::class, 'create'])
                 ->name('login');
+Route::get('/enviarAPI', [ProductoController::class, 'enviarAPI'])->name('enviarAPI');
 
 
 Route::middleware('auth')->group(function () {

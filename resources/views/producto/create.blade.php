@@ -3,7 +3,7 @@
 @section('title', 'Dashboard')
 
 @section('content_header')
-    <h1>Dashboard</h1>
+    <h1>Productos</h1>
 @stop
 
 @section('content')
@@ -14,7 +14,7 @@
 
             <div class="card card-default">
                 <div class="card-header">
-                    <span class="card-title">{{ __('Create') }} Producto</span>
+                    <span class="card-title">{{ __('Crear') }} producto</span>
                 </div>
                 <div class="card-body">
                     <form method="POST" action="{{ route('productos.store') }}" role="form" enctype="multipart/form-data" autocomplete="off">

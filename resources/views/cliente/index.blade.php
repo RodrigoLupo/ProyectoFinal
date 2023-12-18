@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header bg-success text-white">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
 
                         <span id="card_title">
@@ -33,7 +33,7 @@
                         </div>
                     @endif
                     <div class="table-responsive">
-                        <table class="table table-striped table-hover display responsive nowrap" width="100%"
+                        <table class="table table-bordered table-striped" width="100%"
                             id="tblClients">
                             <thead class="thead">
                                 <tr>

@@ -14,8 +14,8 @@ return [
     |
     */
 
-    'title' => 'Sales',
-    'title_prefix' => '',
+    'title' => '',
+    'title_prefix' => 'Libreria FELI |',
     'title_postfix' => '',
 
     /*
@@ -130,9 +130,9 @@ return [
     */
 
     'usermenu_enabled' => true,
-    'usermenu_header' => false,
-    'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => false,
+    'usermenu_header' => true,
+    'usermenu_header_class' => 'bg-danger',
+    'usermenu_image' => true,
     'usermenu_desc' => false,
     'usermenu_profile_url' => true,
 
@@ -148,7 +148,7 @@ return [
     |
     */
 
-    'layout_topnav' => null,
+    'layout_topnav' => true,
     'layout_boxed' => null,
     'layout_fixed_sidebar' => null,
     'layout_fixed_navbar' => null,
@@ -215,7 +215,7 @@ return [
     'sidebar_collapse_auto_size' => false,
     'sidebar_collapse_remember' => false,
     'sidebar_collapse_remember_no_transition' => true,
-    'sidebar_scrollbar_theme' => 'os-theme-light',
+    'sidebar_scrollbar_theme' => 'os-theme-none',
     'sidebar_scrollbar_auto_hide' => 'l',
     'sidebar_nav_accordion' => true,
     'sidebar_nav_animation_speed' => 300,
@@ -234,10 +234,10 @@ return [
 
     'right_sidebar' => false,
     'right_sidebar_icon' => 'fas fa-cogs',
-    'right_sidebar_theme' => 'dark',
+    'right_sidebar_theme' => 'light',
     'right_sidebar_slide' => true,
     'right_sidebar_push' => true,
-    'right_sidebar_scrollbar_theme' => 'os-theme-light',
+    'right_sidebar_scrollbar_theme' => 'os-theme-none',
     'right_sidebar_scrollbar_auto_hide' => 'l',
 
     /*
@@ -352,7 +352,7 @@ return [
                     'url'  => '/venta',
                 ],
                 [
-                    'text' => 'Listar ventas',
+                    'text' => 'Lista',
                     'url'  => '/venta/show',
                 ],
             ],

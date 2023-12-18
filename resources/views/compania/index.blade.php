@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-sm-12">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header bg-danger text-white">
                     <div style="display: flex; justify-content: space-between; align-items: center;">
 
                         <span id="card_title">

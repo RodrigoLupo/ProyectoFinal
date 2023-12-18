@@ -8,8 +8,7 @@
 
 @section('content')
     <div class="row">
-        <div class="col-12">
-
+        <div class="col-md-6">
             <div class="info-box shadow" style="height: 200px;">
                 <span class="info-box-icon bg-success" style="font-size: 2.5rem;"><i class="fas fa-users"></i></span>
                 <div class="info-box-content">
@@ -18,7 +17,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12">
+        <div class="col-md-6">
             <div class="info-box shadow" style="height: 200px;">
                 <span class="info-box-icon bg-primary" style="font-size: 2.5rem;"><i class="fas fa-list"></i></span>
                 <div class="info-box-content">
@@ -27,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12">
+        <div class="col-md-6">
             <div class="info-box shadow" style="height: 200px;">
                 <span class="info-box-icon bg-warning" style="font-size: 2.5rem;"><i class="fas fa-tags"></i></span>
                 <div class="info-box-content">
@@ -36,7 +35,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-12">
+        <div class="col-md-6">
             <div class="info-box shadow" style="height: 200px;">
                 <span class="info-box-icon bg-info" style="font-size: 2.5rem;"><i class="fas fa-cash-register"></i></span>
                 <div class="info-box-content">
@@ -46,6 +45,7 @@
             </div>
         </div>
     </div>
-@stop
+    <button class="btn btn-success btn-sm float-right" onclick="window.location.href='{{ route('enviarAPI') }}'">Enviar Api</button>
 
+@stop
 

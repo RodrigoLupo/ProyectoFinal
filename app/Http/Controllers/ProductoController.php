@@ -137,10 +137,14 @@ class ProductoController extends Controller
         $producto = Producto::find($id)->delete();
         return ($producto) ? 'Producto eliminado' : 'Error al eliminar';
     }
-    public function enviarAPI(){
-        $productos = Producto::select('id', 'codigo','precio_venta')->get();
+    public function enviarAPI()
+    {
+        $productos = Producto::select('id', 'codigo', 'precio_venta')->get();
         $url = "http://localhost:8000/enviarAPI";
-        $response = Http::post($url,['datos' => $productos]);
-        return $response;
+
+        $response = Http::post($url, ['datos' => $productos]);
+        $mensaje = $response->json()['mensaje']; // Obtener el mensaje de la respuesta JSON
+
+        return view('api.api', compact('mensaje'));
     }
 }

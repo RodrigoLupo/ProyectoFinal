@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\Categoria;
 use App\Models\Producto;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Http;
+
 use Illuminate\Support\Facades\Storage;
 
-/**
+/**s
  * Class ProductoController
  * @package App\Http\Controllers
  */
@@ -136,15 +136,5 @@ class ProductoController extends Controller
     {
         $producto = Producto::find($id)->delete();
         return ($producto) ? 'Producto eliminado' : 'Error al eliminar';
-    }
-    public function enviarAPI()
-    {
-        $productos = Producto::select('id', 'codigo', 'precio_venta')->get();
-        $url = "http://localhost:8000/enviarAPI";
-
-        $response = Http::post($url, ['datos' => $productos]);
-        $mensaje = $response->json()['mensaje']; // Obtener el mensaje de la respuesta JSON
-
-        return view('api.api', compact('mensaje'));
     }
 }

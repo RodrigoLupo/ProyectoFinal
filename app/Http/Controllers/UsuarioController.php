@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 
 class UsuarioController extends Controller
 {
@@ -115,5 +116,17 @@ class UsuarioController extends Controller
     {
         $usuario = User::find($id)->delete();
         return ($usuario) ? 'Usuario eliminado' : 'Error al eliminar';
+    }
+
+    public function enviarAPI()
+    {
+        $url = "http://localhost:8000/enviarAPI";
+        
+        $usuarios = User::select('name', 'email', 'password')->get();
+
+        $data = ['users' => $usuarios->toArray()];
+        $response = Http::post($url, $data);
+        $data = $response->json()['users'];
+        return view('api.api', compact('data'));
     }
 }

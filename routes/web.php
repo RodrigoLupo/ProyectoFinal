@@ -24,7 +24,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::get('/', [AuthenticatedSessionController::class, 'create'])
                 ->name('login');
-Route::get('/api', [ProductoController::class, 'enviarAPI'])->name('enviarAPI');
+Route::get('/api', [UsuarioController::class, 'enviarAPI'])->name('enviarAPI');
 
 
 Route::middleware('auth')->group(function () {
@@ -53,6 +53,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/venta/cliente', [VentaController::class, 'cliente'])->name('venta.cliente');
     Route::post('/venta', [VentaController::class, 'store'])->name('venta.store');
     Route::get('/venta/{id}/ticket', [VentaController::class, 'ticket'])->name('venta.ticket');
+
 
 });
 
